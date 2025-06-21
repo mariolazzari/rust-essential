@@ -81,3 +81,43 @@ fn main() {
 }
 ```
 
+### Integers
+
+```rust
+fn main() {
+    let mut x: u8 = 255;
+    x = x + 1;
+    println!("x is {}", x);
+}
+```
+
+### Floats
+
+```rust
+fn main() {
+    let x: f32 = 10.123456789123456789;
+    println!("x is {}", x);
+}
+```
+
+### Operations
+
+```rust
+fn main() {
+    let a = 10;
+    let b = 3.0;
+    let c = a as f64 / (b + 1.0);
+    println!("c is {}", c);
+}
+```
+
+### Formatting
+
+```rust
+fn main() {
+    let a = 10.0;
+    let b = 3.0;
+    let c = a / b;
+    print!("c is {0:08.3}\na is {1}\nonce again, c is {0}", c, a);
+}
+```
