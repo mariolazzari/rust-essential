@@ -60,3 +60,24 @@ edition = "2024"
 ```
 
 Cargo [book](https://doc.rust-lang.org/cargo/)
+
+## Primitive data types
+
+### Declaring variables
+
+Rust naming [conventions](http://doc.rust-lang.org/1.0.0/style/style/naming/README.html)
+
+```rust
+fn main() {
+    // unmutable variable by default
+    let x = 10;
+    println!("The value of x is: {}", x);
+
+    // nutable variable
+    let mut y = 20;
+    println!("The value of y is: {}", y);
+    y = 30;
+    println!("The value of y is now: {}", y);
+}
+```
+
