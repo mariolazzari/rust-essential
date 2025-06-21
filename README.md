@@ -1,5 +1,7 @@
 # Rust essential training
 
+Rust [book](https://doc.rust-lang.org/book/)
+
 ## First program
 
 ### Install
@@ -38,3 +40,23 @@ fn main() {
     println!("Hello, world!");
 }
 ```
+
+### Cargo
+
+```sh
+cargo --version
+cargo new my_project
+cargo run
+cargo build --release
+```
+
+```toml
+[package]
+name = "my_project"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+```
+
+Cargo [book](https://doc.rust-lang.org/cargo/)
