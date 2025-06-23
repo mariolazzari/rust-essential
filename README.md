@@ -371,15 +371,40 @@ fn main() {
 fn main() {
     let make_x_odd = true;
     let x = if make_x_odd {1} else {2.0};
-    
-    /* if make_x_odd {
-        x = 1;
-    } else {
-        // x = 2;
-    } */
-    
+      
     println!("x is {}", x);    
 }
 ```
 
-### 
+### Loops
+
+```rust
+fn main() {
+    let mut count = 0;
+
+    let result = loop {
+        if count == 10 {
+            break count * 10;
+        }
+        count += 1;
+        println!("count is {}", count);
+    };
+
+    println!("After the loop!");
+    println!("result is {}", result);
+}
+```
+
+### While
+
+```rust
+fn main() {
+    let mut count = 0;
+    let letters = ['a', 'b', 'c'];
+
+    while count < letters.len() {
+        println!("letter is {}", letters[count]);
+        count += 1;
+    }
+}
+```
