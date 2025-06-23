@@ -306,3 +306,80 @@ fn square(x: i32) -> (i32, i32) {
     // println!("End of function"); // This line will never be executed because of the return statement above.
 }
 ```
+
+### CHallenge
+
+```rust
+fn main() {
+    let celsius_temp = 23.0;
+    let fahrenheit_temp = celsius_to_fahrenheit(celsius_temp);
+
+    assert_eq!(fahrenheit_temp, 73.4);
+    println!("Test passed!");
+}
+
+/* YOUR CODE GOES HERE */
+fn celsius_to_fahrenheit(temp: f64) -> f64 {
+    (temp * 9.0 / 5.0) + 32.0
+}
+```
+
+## Program control flow
+
+### Conditional execution
+
+```rust
+fn main() {
+    let x = 4;
+
+    if x + 1 != 3 {
+        println!("x + 1 is NOT 3!");
+    }
+}
+```
+
+### Multiple conditions
+
+```rust
+fn main() {
+    let x = 3;
+    let y = 5;
+
+    if x > y {
+        println!("x is greater than y");
+    } else {
+        if x < y {
+            println!("x is less than y");
+        } else {
+            println!("x is equal to y");
+        }
+    }
+
+    if x > y {
+        println!("x is greater than y");
+    } else if x < y {
+        println!("x is less than y");
+    } else {
+        println!("x is equal to y");
+    }
+}
+```
+
+### Conditional assignement
+
+```rust
+fn main() {
+    let make_x_odd = true;
+    let x = if make_x_odd {1} else {2.0};
+    
+    /* if make_x_odd {
+        x = 1;
+    } else {
+        // x = 2;
+    } */
+    
+    println!("x is {}", x);    
+}
+```
+
+### 
