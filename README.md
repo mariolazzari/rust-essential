@@ -497,3 +497,24 @@ fn main() {
     println!("planet is {planet}");
 }
 ```
+
+### Shadowing
+
+- Declare a new variable with the same name as an existing one
+- New variable shadows the previous one
+-  
+
+```rust
+fn main() {
+    let planet = "Earth";
+    {
+        println!("planet is {planet}");
+        let planet = 4;
+        println!("planet is {planet}");
+    }
+    println!("planet is {planet}");
+}
+```
+
+### Stack and heap values
+
