@@ -480,3 +480,20 @@ fn main() {
     println!("Tests passed!");
 }
 ```
+
+## Ownership
+
+### Scope
+
+- Portion where a variable is valid
+- Blocks of code are defined by {}
+
+```rust
+fn main() {
+    let planet = "Earth";
+    if true {
+        println!("planet is {planet}");
+    }
+    println!("planet is {planet}");
+}
+```
