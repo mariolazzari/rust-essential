@@ -556,3 +556,14 @@ fn main() {
     println!("message is {message}");
 }
 ```
+
+### Ownership
+
+- Head has lots of space
+- Not infinite
+- Cleanup unused blocks
+- **Variables are responsible for freeing their own resources**
+  - Value is owned by *one and only one* variable at the time
+  - When a variable runs out of scoped, its value is dropped 
+
+### 
