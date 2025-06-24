@@ -518,3 +518,41 @@ fn main() {
 
 ### Stack and heap values
 
+#### Stack
+
+- Values stored in sequential order
+- LIFO
+- Quick data access (push and pop)
+- Small size
+- Fixed size data
+
+#### Heap
+
+- Data store memory address
+- Dara access is slower
+- Dynamic data add and remove
+
+### String
+
+Strings [documentation](https://doc.rust-lang.org/std/string/struct.String.html)
+
+#### Literal
+- "..."
+- Hard coded
+- Immutable
+- Must be known before compilation
+
+#### Type
+
+- Allocated on the heap
+- Mutable
+- Dynamically generated at runtime
+  
+```rust
+fn main() {
+    let mut message = String::from("Earth");
+    println!("message is {message}");
+    message.push_str(" is home.");
+    println!("message is {message}");
+}
+```
