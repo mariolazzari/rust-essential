@@ -566,4 +566,24 @@ fn main() {
   - Value is owned by *one and only one* variable at the time
   - When a variable runs out of scoped, its value is dropped 
 
-### 
+### Move, copy and clone data
+
+- Copy
+  - Stack only data types
+  - Implicity
+
+```rust
+fn main() {
+    let outer_planet: i32;
+    {
+        let mut inner_planet = 1;
+        outer_planet = inner_planet;
+        inner_planet += 1;
+        println!("inner_planet is {}", inner_planet);
+    }
+    println!("outer_planet is {}", outer_planet);
+}
+```
+
+### Transfering ownership
+
