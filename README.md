@@ -699,3 +699,29 @@ fn get_first_word(s: &str) -> &str {
     &s // no spaces found; input is a single word
 }
 ```
+
+### Clhallenge: trim spaces
+
+```rust
+fn trim_spaces(s: &str) -> &str {
+    // locate the first non-space character
+    let mut start = 0;
+    for (index, character) in s.chars().enumerate() {
+        if character != ' ' {
+            start = index;
+            break;
+        }
+    }
+
+    // search in reverse to locate the last non-space character
+    let mut end = 0;
+    for (index, character) in s.chars().rev().enumerate() {
+        if character != ' ' {
+            end = s.len() - index;
+            break;
+        }
+    }
+
+    &s[start..end]
+}
+```
