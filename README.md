@@ -759,3 +759,23 @@ fn main() {
     println!("number + 1 is {}", number + 1);
 }
 ```
+
+### Crates
+
+[Crates site](https://crates.io/)
+
+- Collection of Rust code
+- Binary crates
+- Libraries
+
+```rust
+use rand::prelude::*;
+
+fn main() {
+    let number = random::<f64>();
+    println!("number is {}", number);
+
+    let number = thread_rng().gen_range(1..11);
+    println!("number is {}", number);
+}
+```
