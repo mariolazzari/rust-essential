@@ -725,3 +725,37 @@ fn trim_spaces(s: &str) -> &str {
     &s[start..end]
 }
 ```
+
+## Modules
+
+### Standard library
+
+[Documentation](https://doc.rust-lang.org/std/)
+
+### Standard input
+
+```rust
+use std::io;
+
+fn main() {
+    let mut buffer = String::new();
+    println!("Enter a message:");
+    io::stdin().read_line(&mut buffer);
+    println!("buffer is {}", buffer);
+}
+```
+
+### Parse strings
+
+```rust
+use std::io;
+
+fn main() {
+    let mut buffer = String::new();
+    println!("Enter a message:");
+    io::stdin().read_line(&mut buffer);
+
+    let number: i32 = buffer.trim().parse().unwrap();
+    println!("number + 1 is {}", number + 1);
+}
+```
