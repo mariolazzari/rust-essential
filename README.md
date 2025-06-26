@@ -779,3 +779,46 @@ fn main() {
     println!("number is {}", number);
 }
 ```
+
+```toml
+[package]
+name = "crates"
+version = "0.1.0"
+authors = ["Barron Stone <omitted@email.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.8.0"
+```
+
+### Challenge
+
+```rust
+use rand::prelude::*;
+use std::io;
+
+fn main() {
+    let secret_number = rand::thread_rng().gen_range(1..101);
+
+    println!("I'm thinking of a number between 1 and 100...");
+    println!("Guess the number:");
+    loop {
+        let mut guess = String::new();
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read input line.");
+        let guess: u32 = guess.trim().parse().expect("Failed to parse the guess.");
+
+        if guess > secret_number {
+            println!("\n{} is too high! Guess lower:", guess);
+        } else if guess < secret_number {
+            println!("\n{} is too low! Guess higher:", guess);
+        } else {
+            println!("\nYou got it! The secret number was {}.", secret_number);
+            break;
+        }
+    }
+}
+```

@@ -1,5 +1,5 @@
-use std::io;
 use rand::prelude::*;
+use std::io;
 
 fn main() {
     let secret_number = rand::thread_rng().gen_range(1..101);
@@ -8,7 +8,9 @@ fn main() {
     println!("Guess the number:");
     loop {
         let mut guess = String::new();
-        io::stdin().read_line(&mut guess).expect("Failed to read input line.");
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read input line.");
         let guess: u32 = guess.trim().parse().expect("Failed to parse the guess.");
 
         if guess > secret_number {
@@ -19,5 +21,5 @@ fn main() {
             println!("\nYou got it! The secret number was {}.", secret_number);
             break;
         }
-    }    
+    }
 }
