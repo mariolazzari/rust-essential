@@ -848,3 +848,24 @@ fn main() {
     println!("arg2 is {}", arg2);
 }
 ```
+
+### Reading files
+
+- [fs](https://doc.rust-lang.org/std/fs/index.html)
+- [path](https://doc.rust-lang.org/std/path/struct.Path.html)
+
+```rust
+use std::fs;
+
+fn main() {
+    let contents = fs::read_to_string("planets.txt").unwrap();
+    println!("contents is {}", contents);
+
+    for line in contents.lines() {
+        println!("line is {}", line);
+    }
+
+    let contents = fs::read("planets.txt").unwrap();
+    println!("contents is {:?}", contents);
+}
+```
