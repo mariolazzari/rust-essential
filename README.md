@@ -290,7 +290,7 @@ fn say_the_sum(a: u8, b: u8) {
 
 - Evaluates to a resulting value
 - Does not end with semicolon
-- 
+-
 
 ### Function return values
 
@@ -371,8 +371,8 @@ fn main() {
 fn main() {
     let make_x_odd = true;
     let x = if make_x_odd {1} else {2.0};
-      
-    println!("x is {}", x);    
+
+    println!("x is {}", x);
 }
 ```
 
@@ -502,7 +502,7 @@ fn main() {
 
 - Declare a new variable with the same name as an existing one
 - New variable shadows the previous one
--  
+-
 
 ```rust
 fn main() {
@@ -547,7 +547,7 @@ Strings [documentation](https://doc.rust-lang.org/std/string/struct.String.html)
 - Allocated on the heap
 - Mutable
 - Dynamically generated at runtime
-  
+
 ```rust
 fn main() {
     let mut message = String::from("Earth");
@@ -564,7 +564,7 @@ fn main() {
 - Cleanup unused blocks
 - **Variables are responsible for freeing their own resources**
   - Value is owned by *one and only one* variable at the time
-  - When a variable runs out of scoped, its value is dropped 
+  - When a variable runs out of scoped, its value is dropped
 
 ### Move, copy and clone data
 
@@ -897,7 +897,7 @@ fn main() {
 
 ### Challenge
 
-```rust 
+```rust
 use std::env;
 use std::fs;
 
@@ -917,5 +917,28 @@ fn main() {
     }
 
     println!("{} did NOT walk on the Moon... YET!", search_name);
+}
+```
+
+## Structs
+
+```rust
+#[derive(Debug)]
+struct Shuttle {
+    name: String,
+    crew_size: u8,
+    propellant: f64,
+}
+
+fn main() {
+    let mut vehicle = Shuttle {
+        name: String::from("Endeavour"),
+        crew_size: 7,
+        propellant: 835958.0,
+    };
+    println!("name is {}", vehicle.name);
+
+    vehicle.name = String::from("Atlantis");
+    println!("vehicle is {:?}", vehicle);
 }
 ```
