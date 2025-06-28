@@ -1086,3 +1086,9 @@ fn main() {
     println!("rect is {:?}", rect);
 }
 ```
+
+### Generic method definitions
+
+```rust
+
+```
