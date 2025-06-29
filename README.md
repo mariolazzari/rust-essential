@@ -1320,3 +1320,9 @@ fn main() {
     println!("hubble > gps is {}", hubble > gps);
 }
 ```
+
+### Trait bounds
+
+```rust
+
+```
