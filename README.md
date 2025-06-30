@@ -1527,3 +1527,11 @@ fn main() {
     println!("sender is {}", sender);
 }
 ```
+
+### Static lifetime
+
+- References available for entire duration of a program
+
+```rust
+let s: &'static str = "Static lifetime";
+```
