@@ -1414,3 +1414,22 @@ fn main() {
     println!("hubble is {}", hubble);
 }
 ```
+
+## Lifetimes
+
+### Borrow checker
+
+- Compares scopes to determine whether all borrows are valid
+
+
+```rust
+fn main() {
+    let propellant;
+    {
+        let rp1 = String::from("RP-1");
+        propellant = &rp1;
+        println!("propellant is {}", propellant); // correct
+    }
+    //    println!("propellant is {}", propellant); -> error!
+}
+```
