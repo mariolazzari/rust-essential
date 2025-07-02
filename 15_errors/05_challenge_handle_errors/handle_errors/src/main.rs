@@ -1,5 +1,5 @@
-use std::io;
 use rand::prelude::*;
+use std::io;
 
 fn main() {
     let secret_number = rand::thread_rng().gen_range(1, 101);
@@ -10,15 +10,15 @@ fn main() {
         let mut buffer = String::new();
         let guess = match io::stdin().read_line(&mut buffer) {
             Ok(_) => match buffer.trim().parse::<u32>() {
-                        Ok(value) => value, // success
-                        Err(_) => {
-                            println!("\nFailed to parse input. Guess again:");
-                            continue
-                        }
-                     }
+                Ok(value) => value, // success
+                Err(_) => {
+                    println!("\nFailed to parse input. Guess again:");
+                    continue;
+                }
+            },
             Err(_) => {
                 println!("\nFailed to read input. Guess again:");
-                continue
+                continue;
             }
         };
 
@@ -30,5 +30,5 @@ fn main() {
             println!("\nYou got it! The secret number was {}.", secret_number);
             break;
         }
-    }    
+    }
 }
